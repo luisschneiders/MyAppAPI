@@ -17,9 +17,13 @@
     <None Remove="Schemas\" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="DotNetEnv" />
+    <None Remove="Settings\" />
+    <None Remove="Settings\Enum\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Schemas\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Settings\Enum\" />
   </ItemGroup>
 </Project>

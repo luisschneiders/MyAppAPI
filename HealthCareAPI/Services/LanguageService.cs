@@ -1,9 +1,11 @@
 ﻿using System;
+using HealthCareAPI.Settings.Enum;
 
 namespace HealthCareAPI.Services
 {
 	public class LanguageService
 	{
+        private static Language? _scope { get; set; } = Language.translation;
 
         public static async Task<string> GetAsync()
         {
@@ -18,7 +20,7 @@ namespace HealthCareAPI.Services
             {
                 Method = HttpMethod.Get,
 
-                RequestUri = new Uri(endpoint + route),
+                RequestUri = new Uri(endpoint + route + "&scope=" + _scope),
 
                 Headers =
                 {
@@ -26,7 +28,6 @@ namespace HealthCareAPI.Services
                     { "x-rapidapi-key", x_rapidapi_key },
                 },
             };
-
 
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
