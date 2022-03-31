@@ -19,11 +19,15 @@
     <None Remove="DotNetEnv" />
     <None Remove="Settings\" />
     <None Remove="Settings\Enum\" />
+    <None Remove="Shared\" />
+    <None Remove="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Schemas\" />
     <Folder Include="Settings\" />
     <Folder Include="Settings\Enum\" />
+    <Folder Include="Shared\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>
