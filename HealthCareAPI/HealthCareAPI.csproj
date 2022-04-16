@@ -21,6 +21,7 @@
     <None Remove="Settings\Enum\" />
     <None Remove="Shared\" />
     <None Remove="Helpers\" />
+    <None Remove="Middleware\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
@@ -29,5 +30,6 @@
     <Folder Include="Settings\Enum\" />
     <Folder Include="Shared\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Middleware\" />
   </ItemGroup>
 </Project>

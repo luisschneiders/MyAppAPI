@@ -1,4 +1,5 @@
 ﻿using DotNetEnv;
+using HealthCareAPI.Middleware;
 
 // Load env variables
 Env.Load();
@@ -21,6 +22,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ApiKeyMiddleware>();
 
 app.UseAuthorization();
 
