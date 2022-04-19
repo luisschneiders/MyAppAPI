@@ -7,7 +7,7 @@ namespace HealthCareAPI.Services
 	{
         private static LanguageHelper _languageHelper { get; set; } = new();
 
-        private string _uri { get; set; } = "";
+        private string _uri { get; set; } = String.Empty;
         private bool _hasParameter { get; set; }
 
         public async Task<string> GetAsync(string parameter)
