@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1700.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCareAPI", "HealthCareAPI\HealthCareAPI.csproj", "{21C0D45B-35FB-4F79-81C6-2B13230BD415}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabelLibrary", "LabelLibrary\LabelLibrary.csproj", "{12081FBE-D3A0-4ED5-BF3C-9FD13D9E79A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{21C0D45B-35FB-4F79-81C6-2B13230BD415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21C0D45B-35FB-4F79-81C6-2B13230BD415}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21C0D45B-35FB-4F79-81C6-2B13230BD415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12081FBE-D3A0-4ED5-BF3C-9FD13D9E79A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12081FBE-D3A0-4ED5-BF3C-9FD13D9E79A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12081FBE-D3A0-4ED5-BF3C-9FD13D9E79A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12081FBE-D3A0-4ED5-BF3C-9FD13D9E79A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
