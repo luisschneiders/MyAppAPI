@@ -406,3 +406,6 @@ ASALocalRun/
 
 # ENV Variables
 .env
+
+# Labels folder
+*/Labels/
