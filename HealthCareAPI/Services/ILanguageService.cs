@@ -3,11 +3,13 @@ namespace HealthCareAPI.Services
 {
     public interface ILanguageService
     {
-        public Task<string> GetAsync(string parameter);
+        public Task<string> GetLanguagesAsync();
 
-        public void BuildURI(string parameter);
+        public Task<string> GetLanguagesByScopeAsync(string parameter);
 
-        public void CheckParameter(string parameter);
+        public void BuildURI();
+
+        public void BuildURIWithParameter(string parameter);
+
     }
 }
-
