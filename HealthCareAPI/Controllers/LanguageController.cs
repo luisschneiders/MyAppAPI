@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace HealthCareAPI.Controllers
 {
 	[ApiController]
-	[Route("/api/v1/[controller]")]
+	[Route("/api/v1/[controller]s")]
 	public class LanguageController : Controller
 	{
 
@@ -26,7 +26,7 @@ namespace HealthCareAPI.Controllers
 		}
 
         [HttpGet("{id}")]
-        public async Task<string> GetLanguageByScopeAsync([FromQuery] LanguageScope id)
+        public async Task<string> GetLanguageByScopeAsync(LanguageScope id)
         {
             _scope = AppSettings.BuildScope(id);
 

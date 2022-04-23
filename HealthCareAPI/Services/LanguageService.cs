@@ -5,7 +5,8 @@ namespace HealthCareAPI.Services
 {
 	public class LanguageService : ILanguageService
 	{
-        private string _uri { get; set; } = "";
+
+        private string _uri { get; set; } = String.Empty;
 
         public async Task<string> GetLanguagesAsync()
         {
