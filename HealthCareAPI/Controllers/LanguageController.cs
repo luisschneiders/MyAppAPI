@@ -26,7 +26,7 @@ namespace HealthCareAPI.Controllers
 		}
 
         [HttpGet("{id}")]
-        public async Task<string> GetLanguageByScopeAsync([FromQuery] LanguageScope id)
+        public async Task<string> GetLanguageByScopeAsync(LanguageScope id)
         {
             _scope = AppSettings.BuildScope(id);
 
