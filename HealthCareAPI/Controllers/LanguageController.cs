@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace HealthCareAPI.Controllers
 {
 	[ApiController]
-	[Route("/api/v1/[controller]")]
+	[Route("/api/v1/[controller]s")]
 	public class LanguageController : Controller
 	{
 
