@@ -16,14 +16,23 @@ namespace HealthCareAPI.Controllers
 
         private string _scope { get; set; } = "";
 
-		[HttpGet(Name = "GetLanguages")]
-		public async Task<string> GetAsync([FromQuery] LanguageScope scope)
+		[HttpGet]
+		public async Task<string> GetLanguageAsync()
 		{
-			_scope = AppSettings.BuildScope(scope);
 
-			var languages = await _languageService.GetAsync(_scope);
+			var languages = await _languageService.GetLanguagesAsync();
 
 			return languages;
 		}
-	}
+
+        [HttpGet("{id}")]
+        public async Task<string> GetLanguageByScopeAsync([FromQuery] LanguageScope id)
+        {
+            _scope = AppSettings.BuildScope(id);
+
+            var languages = await _languageService.GetLanguagesByScopeAsync(_scope);
+
+            return languages;
+        }
+    }
 }
