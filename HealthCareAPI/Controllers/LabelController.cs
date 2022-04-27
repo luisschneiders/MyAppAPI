@@ -1,5 +1,4 @@
-﻿using System;
-using HealthCareAPI.Services;
+﻿using HealthCareAPI.Services;
 using LabelLibrary.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,6 +14,13 @@ namespace HealthCareAPI.Controllers
         public async Task<string> Post([FromBody] LabelMop labelMop)
         {
             return await _labelService.PostAsync(labelMop);
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            Byte[] b = System.IO.File.ReadAllBytes(@"./Labels/lfs_label_model_001.png");   // You can use your own method over here.         
+            return File(b, "image/png");
         }
     }
 }
