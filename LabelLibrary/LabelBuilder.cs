@@ -21,7 +21,7 @@ namespace LabelLibrary
             stringBuilder.Append($"{_zpl.FieldOrigin}20,60{_zpl.FieldData}DEPARTMENT{_zpl.FieldSeparator}");
 
             stringBuilder.Append($"{_zpl.ChangeDefaultFont}A0,{((int)FontSize.Data).ToString()}");
-            stringBuilder.Append($"{_zpl.FieldOrigin}20,80{_zpl.FieldData}{labelMop.Department}{_zpl.FieldSeparator}");
+            stringBuilder.Append($"{_zpl.FieldOrigin}20,80{_zpl.FieldData}{labelMop.Department.Name}{_zpl.FieldSeparator}");
 
             stringBuilder.Append($"{_zpl.ChangeDefaultFont}0,{((int)FontSize.Subtitle).ToString()}");
             stringBuilder.Append($"{_zpl.FieldOrigin}20,120{_zpl.FieldData}LOCATION{_zpl.FieldSeparator}");
