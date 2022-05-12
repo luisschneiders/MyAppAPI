@@ -1,7 +1,5 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using BaseLibrary.Models;
-using DepartmentLibrary.Models;
 
 namespace LabelLibrary.Models
 {
@@ -10,13 +8,10 @@ namespace LabelLibrary.Models
         [Required]
         public string? CompanyName { get; set; }
 
-        [ValidateComplexType]
-        public Department Department { get; set; } = new();
+        [Required]
+        public Guid DepartmentId { get; set; }
 
         [Required]
         public string? Location { get; set; }
-
-        // Shadow properties
-        public Guid DepartmentId { get; set; }
     }
 }
