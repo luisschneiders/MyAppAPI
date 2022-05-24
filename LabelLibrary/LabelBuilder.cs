@@ -9,7 +9,7 @@ namespace LabelLibrary
     {
         private ZPLCommand _zpl { get; set; } = new();
 
-        public string BuildLabelMop(LabelMop labelMop, int? qtdToPrint)
+        public string BuildLabelMop(LabelMopDto labelMop, int? qtdToPrint)
         {
             StringBuilder stringBuilder = new();
 
@@ -21,13 +21,13 @@ namespace LabelLibrary
             stringBuilder.Append($"{_zpl.FieldOrigin}20,60{_zpl.FieldData}DEPARTMENT{_zpl.FieldSeparator}");
 
             stringBuilder.Append($"{_zpl.ChangeDefaultFont}A0,{((int)FontSize.Data).ToString()}");
-            stringBuilder.Append($"{_zpl.FieldOrigin}20,80{_zpl.FieldData}{labelMop.DepartmentId}{_zpl.FieldSeparator}");
+            stringBuilder.Append($"{_zpl.FieldOrigin}20,80{_zpl.FieldData}{labelMop.DepartmentName}{_zpl.FieldSeparator}");
 
             stringBuilder.Append($"{_zpl.ChangeDefaultFont}0,{((int)FontSize.Subtitle).ToString()}");
-            stringBuilder.Append($"{_zpl.FieldOrigin}20,120{_zpl.FieldData}LOCATION{_zpl.FieldSeparator}");
+            stringBuilder.Append($"{_zpl.FieldOrigin}20,120{_zpl.FieldData}AREA{_zpl.FieldSeparator}");
 
             stringBuilder.Append($"{_zpl.ChangeDefaultFont}A0,{((int)FontSize.Data).ToString()}");
-            stringBuilder.Append($"{_zpl.FieldOrigin}20,140{_zpl.FieldData}{labelMop.Location}{_zpl.FieldSeparator}");
+            stringBuilder.Append($"{_zpl.FieldOrigin}20,140{_zpl.FieldData}{labelMop.AreaName}{_zpl.FieldSeparator}");
 
             stringBuilder.Append($"{_zpl.ChangeDefaultFont}0,{((int)FontSize.Subtitle).ToString()}");
             stringBuilder.Append($"{_zpl.FieldOrigin}20,180{_zpl.FieldData}PICK UP TIME{_zpl.FieldSeparator}");

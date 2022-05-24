@@ -11,7 +11,7 @@ namespace HealthCareAPI.Services
         private string _labelMop { get; set; } = String.Empty;
         private LabelBuilder _labelBuilder = new();
 
-        public async Task<string> PostAsync(LabelMop labelMop)
+        public async Task<string> PostAsync(LabelMopDto labelMop)
         {
             _labelMop = _labelBuilder.BuildLabelMop(labelMop, 1);
 

@@ -11,7 +11,7 @@ namespace HealthCareAPI.Controllers
         private LabelService _labelService { get; set; } = new();
 
         [HttpPost]
-        public async Task<string> Post([FromBody] LabelMop labelMop)
+        public async Task<string> Post([FromBody] LabelMopDto labelMop)
         {
             return await _labelService.PostAsync(labelMop);
         }
