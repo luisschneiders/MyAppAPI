@@ -5,8 +5,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>a39ff0e0-8be4-4084-88bc-d0b14c8162e7</UserSecretsId>
+    <AssemblyName>MyAppAPI</AssemblyName>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'HealthCareAPI' " />
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
